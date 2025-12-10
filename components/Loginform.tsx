@@ -77,7 +77,7 @@ export default function LoginForm({ onSuccess }: LoginFormProps) {
     backgroundColor: "#2563EB",         
     color: "white",                      
     padding: "0.75rem",                 
-    borderRadius: "0.5rem",          
+    borderRadius: "0.375rem",          
     fontWeight: 600,                      
     transition: "background-color 0.2s",  
     cursor: loading ? "not-allowed" : "pointer",

@@ -89,7 +89,7 @@ export default function SignupForm() {
           Sign In 
         </a>
       </p>
-     <div style={{marginTop:'1rem' }}>
+     <div style={{marginTop:'1rem' , backgroundColor:'#4A4DE8'}}>
        <button
   type="submit"
   disabled={loading}

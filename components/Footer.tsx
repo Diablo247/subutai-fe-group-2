@@ -16,7 +16,7 @@ const footerData = [
     items: ['Privacy Policy', 'Terms of Service'],
   },
 ]
-const Footer = () => {
+export const Footer = () => {
   return (
     <div
       style={{

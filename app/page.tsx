@@ -1,4 +1,4 @@
-import Footer from '@/components/Footer'
+import { Footer } from '@/components/Footer'
 import HomeHero from '@/components/home/HomeHero'
 import MultiCard from '@/components/home/MultiCard'
 import Navbar from '@/components/Navbar'
