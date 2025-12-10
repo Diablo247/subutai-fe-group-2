@@ -12,7 +12,7 @@ export function useSignup() {
     try {
       const { data: authData, error: authError } = await supabase.auth.signUp({
         email,
-        password,
+        password
       });
 
       if (authError || !authData.user) {
