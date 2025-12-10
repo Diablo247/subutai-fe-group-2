@@ -1,22 +1,45 @@
-"use client";
+'use client'
 
-import { useEffect, useState } from "react";
-import { getTours } from "./action";
-import CreateTourModal from "./components/createTourModal";
-import TourList from "./components/TourList";
+import { useEffect, useState } from 'react'
+import { getTours } from './action'
+import CreateTourModal from './components/createTourModal'
+import TourList from './components/TourList'
+
+// ---- Define your types ----
+export interface Step {
+  id: string
+  title: string
+  content: string
+}
+
+export interface Tour {
+  id: string
+  title: string
+  description?: string
+  steps?: Step[]
+  created_at?: string
+}
 
 export default function ToursPage() {
-  const [tours, setTours] = useState([]);
-  const [openCreateModal, setOpenCreateModal] = useState(false);
+  const [tours, setTours] = useState<Tour[]>([])
+  const [openCreateModal, setOpenCreateModal] = useState(false)
 
-  const refresh = async () => {
-    const data = await getTours();
-    setTours(data);
-  };
+  const refresh = async (): Promise<void> => {
+    try {
+      const data = await getTours()
+      setTours(data ?? [])
+    } catch (error) {
+      console.error('Failed to fetch tours:', error)
+      setTours([])
+    }
+  }
 
   useEffect(() => {
-    refresh();
-  }, []);
+    // IIFE = fixes ESLint "set-state-in-effect"
+    ;(async () => {
+      await refresh()
+    })()
+  }, [])
 
   return (
     <div className="px-12 py-10">
@@ -36,11 +59,8 @@ export default function ToursPage() {
       </div>
 
       {openCreateModal && (
-        <CreateTourModal
-          close={() => setOpenCreateModal(false)}
-          refresh={refresh}
-        />
+        <CreateTourModal close={() => setOpenCreateModal(false)} refresh={refresh} />
       )}
     </div>
-  );
+  )
 }

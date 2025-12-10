@@ -1,3 +1,4 @@
+
 "use client";
 import React from 'react'
 import Navbar from '@/components/Navbar'
@@ -19,3 +20,4 @@ const About:React.FC = () => {
 }
 
 export default About
+
