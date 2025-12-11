@@ -89,7 +89,11 @@ export default function SignupForm() {
           Sign In 
         </a>
       </p>
+<<<<<<< HEAD
      <div style={{marginTop:'1rem' }}>
+=======
+     <div style={{marginTop:'1rem' , backgroundColor:'#4A4DE8'}}>
+>>>>>>> f6c1dfe (fix: "worked on the login , register and home screen")
        <button
   type="submit"
   disabled={loading}
@@ -98,7 +102,11 @@ export default function SignupForm() {
     backgroundColor: "#2563EB",         
     color: "white",                      
     padding: "0.75rem",                 
+<<<<<<< HEAD
     borderRadius: "0.5rem",           
+=======
+    borderRadius: "0.375rem",          
+>>>>>>> f6c1dfe (fix: "worked on the login , register and home screen")
     fontWeight: 600,                      
     transition: "background-color 0.2s",  
     cursor: loading ? "not-allowed" : "pointer",
