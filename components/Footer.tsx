@@ -26,10 +26,18 @@ const Footer:React.FC = () => {
     width: "100%",
     zIndex: 50,
       }}>
-      <div className="flex gap-6 p-6 flex-wrap justify-center">
+      <div
+      style={{
+           display: "flex",
+    gap: "1.5rem",     
+    padding: "1.5rem",  
+    flexWrap: "wrap",
+    justifyContent: "center",
+      }}
+      >
         <div className='flex-row-wrap'>
         <div>
-      <FooterLogo width={200} height={100} />
+      <FooterLogo width={300} height={100} />
         </div>
        {footerData.map((section, idx) => (
         <div key={idx} className="footer-section">

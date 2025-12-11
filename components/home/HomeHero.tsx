@@ -15,7 +15,8 @@ const HomeHero:React.FC = () => {
         <p
         style={{
             fontWeight:'600',
-            fontSize:'3.8rem'
+            fontSize:'3.8rem',
+            textAlign:'center',
         }}
         >   Build Product Tours In <span style={{color:'#4A4DE8'}}> Minutes </span></p>
         <p
