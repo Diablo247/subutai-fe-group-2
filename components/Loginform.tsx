@@ -67,7 +67,7 @@ export default function LoginForm({ onSuccess }: LoginFormProps) {
 
       <p className="text-center text-sm text-gray-500 mt-1">
         Don&apos;t have an account?{' '}
-        <a href="/register" className="text-blue-600 hover:underline">
+        <a href="/Register" className="text-blue-600 hover:underline">
           Sign up
         </a>
       </p>
