@@ -204,7 +204,7 @@ export default function Navbar() {
           padding: "1rem 2rem",
         }}
       >
-        <LogoSvg size={50} />
+        <LogoSvg size={1} />
 
         {!isMobile ? (
           <div style={{ display: "flex", flexDirection: "row", gap: "2rem" }}>
