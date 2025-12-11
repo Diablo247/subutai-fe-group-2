@@ -11,6 +11,11 @@ const HomeHero: React.FC = () => {
             textAlign:'center',
         }}
       >
+       <p>
+  Build Product Tours In{" "}
+  <span style={{ color: "#4A4DE8" }}>Minutes</span>
+</p>
+
         <p
         style={{
             fontSize:'1.3rem',
@@ -19,7 +24,7 @@ const HomeHero: React.FC = () => {
         }}
         >Turn new visitors into confident users with interactive step-by-step<br/> product tours. Build, customize, and embed onboarding flows in  <br/> minutes — no code required.</p>
         <div style={{paddingTop:'1rem' , paddingBottom:'1rem'}}></div>
-        <div style={{display:'flex' , gap:'2rem' , flexWrap:'wrap'}}>
+        <div style={{display:'flex' , gap:'2rem' , flexWrap:'wrap' , alignItems:"center" , justifyContent:'center'}}>
                   <div
   style={{
     backgroundColor: "transparent",   
