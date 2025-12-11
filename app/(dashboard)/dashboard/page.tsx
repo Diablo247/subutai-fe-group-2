@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '@/lib/supabase'
 import type { TourRow, AnalyticsEventRow } from '@/types/tour'
+import { useUserData } from '@/hooks/supabase/useUser'
 
 interface DashboardStats {
   totalTours: number
@@ -28,6 +29,8 @@ const EMPTY_STATS: DashboardStats = {
 export default function DashboardPage() {
   const [stats, setStats] = useState<DashboardStats | null>(null)
   const [loading, setLoading] = useState(true)
+    const { user } = useUserData();
+    console.log('user', user)
 
   useEffect(() => {
     const fetchStats = async () => {
@@ -149,7 +152,7 @@ export default function DashboardPage() {
     <div className="px-4 sm:px-8 lg:px-12 py-8 lg:py-10 w-full">
       {/* Header */}
       <h1 className="text-3xl lg:text-4xl font-bold mb-6">
-        Welcome, <span className="text-indigo-600">John</span> 👋
+        Welcome, <span className="text-indigo-600"></span> 👋
       </h1>
 
       {/* Stats Card */}

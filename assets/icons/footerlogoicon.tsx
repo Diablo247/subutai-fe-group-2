@@ -1,7 +1,7 @@
 import * as React from "react";
 
 interface LogoSvgProps extends React.SVGProps<SVGSVGElement> {
-  size?: number; // scale value (1 = original size)
+  size?: number; 
 }
 
 const LogoSvg: React.FC<LogoSvgProps> = ({ size = 1, ...props }) => {

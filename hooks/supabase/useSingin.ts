@@ -1,9 +1,12 @@
+"use client"
+
 import { useState } from 'react'
 import { supabase } from '../../lib/supabaseClient'
 
 export function useSignin() {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState<string | null>(null)
+ 
 
   const signInUser = async (email: string, password: string) => {
     setLoading(true)
@@ -19,7 +22,6 @@ export function useSignin() {
         setError(authError.message)
         return { success: false, error: authError.message }
       }
-
       return { success: true, data }
     } catch (err) {
       // Type is implicitly 'unknown', which is allowed

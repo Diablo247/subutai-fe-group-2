@@ -3,6 +3,7 @@
 import { useState, FormEvent } from "react";
 import { useSignup } from "@/hooks/supabase/useSignup";
 import '../css/form.css';
+import { useRouter } from "next/navigation";
 export default function SignupForm() {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
@@ -10,6 +11,7 @@ export default function SignupForm() {
   const [confirmPassword, setConfirmPassword] = useState<string>("");
 
   const { signUpNewUser, loading, error } = useSignup();
+  const router = useRouter()
 
   const handleSignup = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -22,11 +24,12 @@ export default function SignupForm() {
     const result = await signUpNewUser(email, password, name);
 
     if (!result.success) {
-      alert("Signup failed. Check console.");
+        router.replace('/signin')
+      // alert("Signup failed. Check console.");
       return;
     }
 
-    alert("Signup successful!");
+    // alert("Signup successful!");
   };
 
   return (

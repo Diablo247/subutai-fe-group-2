@@ -3,6 +3,7 @@
 import { useState, FormEvent } from "react";
 import { useSignin } from "@/hooks/supabase/useSingin";
 import '../css/form.css';
+import { useRouter } from "next/navigation";
 interface LoginFormProps {
   onSuccess?: () => void;
 }
@@ -10,6 +11,7 @@ interface LoginFormProps {
 export default function LoginForm({ onSuccess }: LoginFormProps) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const router = useRouter()
 
   const { signInUser, loading, error } = useSignin();
 
@@ -18,7 +20,8 @@ export default function LoginForm({ onSuccess }: LoginFormProps) {
 
     const res = await signInUser(email, password);
     if (res.success) {
-      alert("Logged in successfully!");
+      router.replace('/dashboard')
+      // alert("Logged in successfully!");
       onSuccess?.();
     }
   };
