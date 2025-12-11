@@ -1,9 +1,9 @@
-"use client";
+'use client'
 
-import * as React from "react";
+import * as React from 'react'
 
 interface SvgIconProps extends React.SVGProps<SVGSVGElement> {
-  size?: number; // width and height
+  size?: number // width and height
 }
 
 const Analyticsicon: React.FC<SvgIconProps> = ({ size = 52, ...props }) => {
@@ -49,7 +49,7 @@ const Analyticsicon: React.FC<SvgIconProps> = ({ size = 52, ...props }) => {
         />
       </defs>
     </svg>
-  );
-};
+  )
+}
 
-export default Analyticsicon;
+export default Analyticsicon

@@ -1,4 +1,4 @@
-"use client";
+'use client'
 
 import Navbar from "@/components/Navbar";
 import LoginForm from "../../components/Loginform";
@@ -16,5 +16,5 @@ export default function Login() {
 </div>
 
     </div>
-  );
+  )
 }

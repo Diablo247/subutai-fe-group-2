@@ -1,20 +1,15 @@
-"use client";
-import * as React from "react";
+'use client'
+import * as React from 'react'
 
 interface SvgComponentProps extends React.SVGProps<SVGSVGElement> {
-  size?: number; // optional prop to set both width and height
-  width?: number; // optional separate width
-  height?: number; // optional separate height
+  size?: number // optional prop to set both width and height
+  width?: number // optional separate width
+  height?: number // optional separate height
 }
 
-const  FlashIcon: React.FC<SvgComponentProps> = ({
-  size = 52,
-  width,
-  height,
-  ...props
-}) => {
-  const finalWidth = width ?? size;
-  const finalHeight = height ?? size;
+const FlashIcon: React.FC<SvgComponentProps> = ({ size = 52, width, height, ...props }) => {
+  const finalWidth = width ?? size
+  const finalHeight = height ?? size
 
   return (
     <svg
@@ -45,12 +40,7 @@ const  FlashIcon: React.FC<SvgComponentProps> = ({
       />
       <path fill="url(#a)" d="M6.591 6.149h39v39h-39z" />
       <defs>
-        <pattern
-          id="a"
-          width={1}
-          height={1}
-          patternContentUnits="objectBoundingBox"
-        >
+        <pattern id="a" width={1} height={1} patternContentUnits="objectBoundingBox">
           <use xlinkHref="#b" transform="scale(.01111)" />
         </pattern>
         <image
@@ -62,7 +52,7 @@ const  FlashIcon: React.FC<SvgComponentProps> = ({
         />
       </defs>
     </svg>
-  );
-};
+  )
+}
 
-export default FlashIcon;
+export default FlashIcon

@@ -1,9 +1,9 @@
-"use client";
+'use client'
 
-import * as React from "react";
+import * as React from 'react'
 
 interface SvgComponentProps extends React.SVGProps<SVGSVGElement> {
-  size?: number; // optional prop for width & height
+  size?: number // optional prop for width & height
 }
 
 const Codeicon: React.FC<SvgComponentProps> = ({ size = 52, ...props }) => {
@@ -49,7 +49,7 @@ const Codeicon: React.FC<SvgComponentProps> = ({ size = 52, ...props }) => {
         />
       </defs>
     </svg>
-  );
-};
+  )
+}
 
-export default Codeicon;
+export default Codeicon

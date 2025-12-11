@@ -1,24 +1,16 @@
-"use client";
+'use client'
 import React from 'react'
 
-const HomeHero:React.FC = () => {
+const HomeHero: React.FC = () => {
   return (
     <div className="flex gap-6 p-6 flex-wrap justify-center">
-    <div
-    style={{
-        display:'flex',
-        alignItems:"center",
-        justifyContent:'center',
-        flexDirection:'column',
-    }}
-    >
-        <p
+      <div
         style={{
             fontWeight:'600',
             fontSize:'3.8rem',
             textAlign:'center',
         }}
-        >   Build Product Tours In <span style={{color:'#4A4DE8'}}> Minutes </span></p>
+      >
         <p
         style={{
             fontSize:'1.3rem',
@@ -64,7 +56,7 @@ const HomeHero:React.FC = () => {
       
 
         </div>
-    </div>
+      </div>
     </div>
   )
 }
