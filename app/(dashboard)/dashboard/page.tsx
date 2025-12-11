@@ -146,10 +146,10 @@ export default function DashboardPage() {
     return <div className="p-10 text-gray-500">Loading dashboard…</div>
   }
   return (
-    <div className="px-4 sm:px-8 lg:px-12 py-8 lg:py-10 w-full">
+    <div className="px-4 sm:px-8 lg:px-12 py-8 lg:py-10 pt-8 w-full">
       {/* Header */}
       <h1 className="text-3xl lg:text-4xl font-bold mb-6">
-        Welcome, <span className="text-indigo-600">John</span> 👋
+        Welcome 👋
       </h1>
 
       {/* Stats Card */}

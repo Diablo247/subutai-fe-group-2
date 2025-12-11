@@ -1,4 +1,4 @@
-import Sidebar from "../../component/Sidebar";
+import Sidebar from "@/component/Sidebar";
 
 export default function DashboardLayout({
   children,
@@ -7,14 +7,8 @@ export default function DashboardLayout({
 }) {
   return (
     <div className="flex h-screen bg-[#F4F6F8]">
-      {/* Sidebar always visible */}
       <Sidebar />
-
-      {/* Main content */}
-      <main className="flex-1 overflow-y-auto">
-        {children}
-      </main>
+      <main className="flex-1 overflow-y-auto">{children}</main>
     </div>
   );
 }
-    

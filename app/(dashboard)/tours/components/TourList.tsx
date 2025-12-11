@@ -1,6 +1,7 @@
 import EditTourModal from "./EditTourModal";
 import DeleteConfirmModal from "./DeleteConfirmationModal";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function TourList({ tours, refresh }: any) {
   const [editTour, setEditTour] = useState(null);
@@ -21,7 +22,16 @@ export default function TourList({ tours, refresh }: any) {
             <h2 className="text-xl font-semibold">{tour.title}</h2>
             <p className="text-gray-600 text-sm">{tour.description}</p>
 
-            <div className="flex gap-4 mt-4">
+            <div className="flex gap-6 mt-4 items-center">
+              {/* ⭐ Manage Steps Button */}
+              <Link
+                href={`/tours/${tour.id}`}
+                className="text-blue-600 font-medium hover:underline"
+              >
+                Manage Steps →
+              </Link>
+
+              {/* Edit */}
               <button
                 onClick={() => setEditTour(tour)}
                 className="text-indigo-600 font-medium"
@@ -29,6 +39,7 @@ export default function TourList({ tours, refresh }: any) {
                 Edit
               </button>
 
+              {/* Delete */}
               <button
                 onClick={() => setDeleteTour(tour)}
                 className="text-red-500 font-medium"
