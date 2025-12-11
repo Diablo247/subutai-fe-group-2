@@ -6,10 +6,9 @@ const HomeHero: React.FC = () => {
     <div className="flex gap-6 p-6 flex-wrap justify-center">
       <div
         style={{
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          flexDirection: 'column',
+            fontWeight:'600',
+            fontSize:'3.8rem',
+            textAlign:'center',
         }}
       >
         <p
