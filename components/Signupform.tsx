@@ -89,7 +89,7 @@ export default function SignupForm() {
           Sign In 
         </a>
       </p>
-     <div style={{marginTop:'1rem' , backgroundColor:'#4A4DE8'}}>
+     <div style={{marginTop:'1rem' }}>
        <button
   type="submit"
   disabled={loading}
@@ -98,7 +98,7 @@ export default function SignupForm() {
     backgroundColor: "#2563EB",         
     color: "white",                      
     padding: "0.75rem",                 
-    borderRadius: "0.375rem",          
+    borderRadius: "0.5rem",           
     fontWeight: 600,                      
     transition: "background-color 0.2s",  
     cursor: loading ? "not-allowed" : "pointer",

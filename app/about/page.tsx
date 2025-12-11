@@ -8,6 +8,7 @@ const About:React.FC = () => {
   return (
     <div style={{paddingLeft:10 , paddingRight:10}}>
         <Navbar/>
+        <div style={{paddingTop:'2rem' , paddingBottom:'2rem'}}></div>
         <AboutHero/>
          <div style={{paddingTop:'2rem' , paddingBottom:'2rem'}}></div>
         <MultiCard/>
