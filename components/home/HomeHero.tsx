@@ -41,7 +41,7 @@ const HomeHero:React.FC = () => {
     color:'#000000',
   }}
 >
- 
+
     Get started
 </div>
             <div
@@ -54,7 +54,7 @@ const HomeHero:React.FC = () => {
     display: "inline-block",
     cursor: "pointer"  ,
     fontSize:'20px',
-     fontWeight:'500' ,        
+    fontWeight:'500' ,  
   }}
 >
    Try demo tour
